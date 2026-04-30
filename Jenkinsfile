@@ -3,13 +3,12 @@ pipeline{
     environment {
         DIRECTORY_PATH= 'SIT223'
         STAGING_ENVIRONMENT= '7.1C'
-        PRODUCTION_ENVIRONMENT= 'BETA'
     } 
     stages{
         stage('Build'){
             steps{
                 echo 'Using Maven Automation tool'
-                echo 'Compiling and packaging code'           
+                echo 'Maven compiling and packaging code'           
             }
         }
         stage('Unit and Integration Tests'){
@@ -17,7 +16,7 @@ pipeline{
                 echo 'Using JUnit for Unit Tests'
                 echo 'JUnit verified code fucntions as expected'
                 echo 'Using TestNG for Integration Tests'
-                echo 'TestNG verified application components work together effectively'
+                echo 'TestNG verified application components work together'
             }
         }
         stage('Code Analysis'){
