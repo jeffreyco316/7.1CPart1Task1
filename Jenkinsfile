@@ -1,7 +1,6 @@
 pipeline{
     agent any
     environment {
-        DIRECTORY_PATH= 'SIT223'
         STAGING_ENVIRONMENT= '7.1C'
     } 
     stages{
